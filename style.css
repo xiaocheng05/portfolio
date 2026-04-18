@@ -2,6 +2,10 @@
   --color-accent: oklch(65% 50% 0);
 }
 
+html {
+  color-scheme: light dark;
+}
+
 body {
   font: 100%/1.5 system-ui;
   
@@ -17,9 +21,13 @@ nav li {
 }
 
 nav {
+  --border-color: oklch(50% 10% 200 / 40%);
+}
+
+nav {
   display: flex;
   margin-bottom: 1rem;
-  border-bottom: 1px solid oklch(80% 3% 200);
+  border-bottom: 1px solid var(--border-color);
 }
 
 nav a {
@@ -96,5 +104,12 @@ h5,
 h6 {
   line-height: 1.1;
   text-wrap: balance;
+}
+
+.color-scheme {
+  position: absolute;
+  top: 1rem;
+  right: 3rem;
+  font-size: 80%;
 }
 
