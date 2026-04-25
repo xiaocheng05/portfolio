@@ -1,0 +1,74 @@
+[
+    {
+        "title": "SoCalGuesser Image Classifier",
+        "year":"2026",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Built a convolution neural network to classify Southern California Images for six places. Used transfer learning and achieved 90% test accuracy."
+    },
+    {
+        "title": "Target, Walmart, Whole Foods Price Comparison",
+        "year":"2026",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Created a data visualization suggesting that while Whole Foods have higher average price compared to Target and Walmart, Target have the highest beverage prices by far."
+    },
+    {
+        "title": "California Wild Fire Analysis",
+        "year":"2025",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Analyzed California wild fire over the past 20 years. Found statistically significant evidence that the fire wires are not happening at an increasing rate."
+    },
+    {
+        "title": "League of Legends Vision Analysis",
+        "year":"2025",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Analyzed vision mechanism in Leaguoe of Legends. Found statisically signifiant evidence that blue side tends to have higher vision score than red side which might explain that blue side have higher win rate."
+    },
+    {
+        "title": "Image Processing",
+        "year":"2025",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Built a full-featured multimedia processing system in Python, implementing image transformations (grayscale, rotation, edge detection) and audio effects (reverb, speed/slow adjustments) with object-oriented design."
+    },
+    {
+        "title": "Odit repellendus sapiente ratione!",
+        "year":"2024",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Numquam distinctio officiis magni explicabo, cum accusantium sint? Ex deserunt similique soluta atque nihil fugiat? Tempora delectus magnam assumenda necessitatibus in natus odit! Sunt temporibus vitae ipsum et eligendi facere."
+    },
+    {
+        "title": "Quis aperiam doloremque iure.",
+        "year":"2024",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Tempore veniam quos ipsam praesentium, sint officia necessitatibus, incidunt nihil magni enim exercitationem repellat voluptates iure velit deleniti temporibus aliquam totam nulla! Blanditiis odio deserunt, voluptas voluptatibus quidem assumenda natus?"
+    },
+    {
+        "title": "Ex quasi a exercitationem.",
+        "year":"2023",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Error, possimus aliquam vero, non, deleniti quasi enim esse natus ut architecto consequatur unde provident maxime officia necessitatibus asperiores veritatis iste. Magni, labore vero in ipsum aut necessitatibus illo provident."
+    },
+    {
+        "title": "Asperiores earum maiores perspiciatis!",
+        "year":"2022",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Dolorum ea quisquam voluptatum animi magnam sequi, impedit quae expedita. Suscipit reiciendis, soluta eligendi repudiandae doloremque quasi pariatur quae ex, a doloribus facere quis quia est exercitationem minima sunt cum."
+    },
+    {
+        "title": "Excepturi in a sequi!",
+        "year":"2021",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Iure excepturi, obcaecati perspiciatis eum quo nam. Quia atque totam quos quasi quisquam itaque ratione provident ut aspernatur modi nesciunt minima, sunt repellendus culpa, ducimus nihil mollitia corporis excepturi ea."
+    },
+    {
+        "title": "Ludantium suscipit cupiditate debitis?",
+        "year":"2020",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Aperiam ab qui expedita perferendis rem modi repellendus, fugit cum similique esse, ullam eius natus eum consectetur velit nesciunt vitae reprehenderit veniam harum sunt voluptatem obcaecati, debitis sit iste? Dolore?"
+    },
+    {
+        "title": "Modi autem aliquid quia?",
+        "year":"2020",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Saepe velit reiciendis debitis eius deleniti! Modi illo debitis quam suscipit incidunt sint quasi ipsa adipisci, labore odit quisquam id eligendi mollitia vitae, maxime sapiente harum optio quaerat ipsum. Soluta?"
+    }
+]

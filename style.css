@@ -113,3 +113,20 @@ h6 {
   font-size: 80%;
 }
 
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+}
+
+.stat .label {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+}
+
+.stat .value {
+  font-size: 3rem;
+  font-weight: 300;
+}

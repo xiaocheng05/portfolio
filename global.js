@@ -1,7 +1,7 @@
 console.log('IT’S ALIVE!');
 
 function $$(selector, context = document) {
-    return Array.from(context.querySelectorAll(selector));
+  return Array.from(context.querySelectorAll(selector));
 }
 
 // const navLinks = $$("nav a");
@@ -17,42 +17,42 @@ function $$(selector, context = document) {
 
 
 const BASE_PATH = (location.hostname === "localhost" || location.hostname === "127.0.0.1")
-    ? "/"                  // Local server
-    : "/portfolio/";         // GitHub Pages repo name
+  ? "/"                  // Local server
+  : "/portfolio/";         // GitHub Pages repo name
 
 let pages = [
-    { url: '', title: 'Home' },
-    { url: 'projects/', title: 'Projects' },
-    { url: 'contact/', title: 'Contact' },
-    { url: 'resume/', title: 'Resume' },
-    { url: 'https://github.com/xiaocheng05', title: 'Profile'}
+  { url: '', title: 'Home' },
+  { url: 'projects/', title: 'Projects' },
+  { url: 'contact/', title: 'Contact' },
+  { url: 'resume/', title: 'Resume' },
+  { url: 'https://github.com/xiaocheng05', title: 'Profile' }
 ];
 
 let nav = document.createElement('nav');
 document.body.prepend(nav);
 
 for (let p of pages) {
-    let url = p.url;
-    let title = p.title;
+  let url = p.url;
+  let title = p.title;
 
-    if (!url.startsWith('http')) {
-        url = BASE_PATH + url;
-    }
+  if (!url.startsWith('http')) {
+    url = BASE_PATH + url;
+  }
 
-    // next step: create link and add it to nav
-    let a = document.createElement('a');
-    a.href = url;
-    a.textContent = title;
-    nav.append(a);
+  // next step: create link and add it to nav
+  let a = document.createElement('a');
+  a.href = url;
+  a.textContent = title;
+  nav.append(a);
 
-    if(title === 'Profile') {
-        a.target = "_blank";
-    }
+  if (title === 'Profile') {
+    a.target = "_blank";
+  }
 
-    a.classList.toggle(
-        'current',
-        a.host === location.host && a.pathname === location.pathname,
-    );
+  a.classList.toggle(
+    'current',
+    a.host === location.host && a.pathname === location.pathname,
+  );
 }
 
 document.body.insertAdjacentHTML(
@@ -93,4 +93,46 @@ if ("colorScheme" in localStorage) {
   );
 
   select.value = scheme;
+}
+
+
+
+
+export async function fetchJSON(url) {
+  try {
+    // Fetch the JSON file from the given URL
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`Failed to fetch projects: ${response.statusText}`);
+    }
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Error fetching or parsing JSON data:', error);
+  }
+}
+
+
+export function renderProjects(projects, containerElement, headingLevel = 'h2') {
+
+  containerElement.innerHTML = '';
+  projects.forEach(project => {
+    const article = document.createElement('article');
+    const heading = document.createElement(headingLevel);
+    heading.textContent = project.title;
+
+    article.appendChild(heading);
+
+    article.innerHTML += `
+    <img src="${project.image}" alt="${project.title}">
+    <p>${project.description}</p>
+  `;
+    containerElement.appendChild(article);
+  });
+
+}
+
+
+export async function fetchGitHubData(username) {
+  return fetchJSON(`https://api.github.com/users/${username}`);
 }
