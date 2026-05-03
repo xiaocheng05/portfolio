@@ -130,3 +130,88 @@ h6 {
   font-size: 3rem;
   font-weight: 300;
 }
+
+.project-year {
+  font-family: "Times New Roman", serif; /* Matches the serif look in the image */
+  font-style: italic;
+  color: #666;
+  margin-top: 5px;
+}
+
+#projects-pie-plot {
+  max-width: 20em;
+  margin-block: 2em;
+
+  overflow: visible;
+}
+
+.container {
+  display: flex;
+  align-items: center;   /* vertically align pie + legend */
+  gap: 2em;              /* space between chart and legend */
+}
+
+/* control pie size */
+.container svg {
+  width: 200px;
+  height: 200px;
+  flex-shrink: 0;        /* prevent shrinking */
+}
+
+/* legend styling (from before, slightly refined) */
+.legend {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+  gap: 1em;
+  padding: 1em;
+  margin: 0;
+  border: 1px solid #ccc;
+  list-style: none;
+  flex: 1;               /* let legend take remaining space */
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.legend-item .swatch {
+  width: 1em;
+  height: 1em;
+  background-color: var(--color);
+  display: inline-block;
+}
+
+.swatch {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  aspect-ratio: 1 / 1;
+  background-color: var(--color);
+  border-radius: 3px;
+}
+
+.legend em {
+  color: #666;
+  font-style: italic;
+}
+
+&:has(path:hover) {
+  path:not(:hover) {
+    opacity: 0.5;
+  }
+}
+
+path {
+  transition: 300ms;
+}
+
+.selected {
+  --color: oklch(60% 45% 0) !important;
+
+  &:is(path) {
+    fill: var(--color);
+  }
+}
+
