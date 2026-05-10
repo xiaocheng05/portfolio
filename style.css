@@ -215,3 +215,121 @@ path {
   }
 }
 
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  margin: 2rem 0;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* The Labels (e.g., TOTAL LOC, TOTAL COMMITS) */
+.stats dt {
+  color: #666;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 1.2;
+  max-width: 80px; /* Forces wrapping for multi-word labels */
+}
+
+/* The Values (e.g., 881, 8, Friday) */
+.stats dd {
+  font-size: 1.5rem;
+  font-weight: 100; 
+  margin: 0;
+  padding: 0;
+  color: #111;
+  line-height: 1;
+}
+
+/* Optional: styling the abbreviation dotted underline */
+.stats abbr {
+  text-decoration: underline dotted;
+  text-underline-offset: 3px;
+  cursor: help;
+}
+
+.gridlines line {
+  stroke: #ccc;
+  stroke-opacity: 0.5;
+  shape-rendering: crispEdges;
+}
+
+.gridlines path {
+  display: none;
+}
+
+circle {
+  transition: 200ms;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+circle:hover {
+  transform: scale(1.5);
+}
+
+dl.info {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.25em 1em;
+  margin: 0;
+}
+
+dl.info dt,
+dl.info dd {
+  margin: 0;
+}
+
+dl.info dt {
+  color: #666;
+  font-weight: 200;
+}
+
+dl.info dd {
+  font-weight: 300;
+}
+
+.tooltip {
+  position: fixed;
+  top: 1em;
+  left: 1em;
+}
+
+.tooltip {
+  position: fixed;
+  top: 1em;
+  left: 1em;
+
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #111;
+
+  padding: 0.75em 1em;
+  border-radius: 0.5em;
+
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.15);
+
+  backdrop-filter: blur(6px);
+
+  font-size: 0.9rem;
+
+  pointer-events: none;
+}
+
+dl.info {
+  /* ... other styles ... */
+  transition-duration: 500ms;
+  transition-property: opacity, visibility;
+}
+
+dl.info[hidden]:not(:hover, :focus-within) {
+  opacity: 0;
+  visibility: hidden;
+}
+
+circle.selected {
+  fill: #ff6b6b;
+}
